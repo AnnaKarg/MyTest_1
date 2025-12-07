@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>ΠΛΑΚΩσεΤΟ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login-button.css">
+</head>
+
+<body>
+
+<div class="board">
+
+    <!-- ΤΙΤΛΟΣ ΠΑΝΩ ΑΡΙΣΤΕΡΑ -->
+    <div class="title-top-left">ΠΛΑΚΩσεΤΟ</div>
+
+    <!-- ΠΑΝΩ ΤΡΙΓΩΝΑ -->
+    <div class="row top">
+        <div class="tri c1"></div>
+        <div class="tri c2"></div>
+        <div class="tri c1"></div>
+        <div class="tri c2"></div>
+        <div class="tri c1"></div>
+        <div class="tri c2"></div>
+    </div>
+
+    <!-- ΚΑΤΩ ΤΡΙΓΩΝΑ -->
+    <div class="row bottom">
+        <div class="tri c2"></div>
+        <div class="tri c1"></div>
+        <div class="tri c2"></div>
+        <div class="tri c1"></div>
+        <div class="tri c2"></div>
+        <div class="tri c1"></div>
+    </div>
+
+    <div class="content">
+        <div class="subtitle">Online τάβλι για όλους!</div>
+
+        <!-- Κουμπιά δίπλα-δίπλα -->
+        <div class="button-row">
+            <div id="login-button-container">
+                <div class="dropdown">
+                    <button class="dropbtn">Είσοδος ▼</button>
+                    <div class="dropdown-content" id="loginPanel">
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="password" id="password" placeholder="Κωδικός">
+                        <button id="loginBtn">Είσοδος</button>
+                        <button id="createBtn">Δημιουργία λογαριασμού</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="visitor-btn">Επισκέπτης ►</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="login-button.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Board γεμίζει όλη την οθόνη */
+.board {
+    width: 100vw;
+    height: 100vh;
+    background: #80532B;
+    padding: 2vw;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Τίτλος πάνω αριστερά */
+.title-top-left {
+    position: absolute;
+    top: 4vh;          /* ΠΙΟ ΚΑΤΩ από πριν */
+    left: 1.5vw;
+    font-size: 4vw;
+    color: #fff65f;
+    font-weight: bold;
+    z-index: 5;
+    padding-bottom: 1vh;  /* λίγο μεγαλύτερο ώστε η γραμμή να μην ακουμπά το κείμενο */
+}
+
+/* Γραμμή κάτω από τον τίτλο σε όλο το πλάτος */
+.title-top-left::after {
+    content: "";
+    display: block;
+    width: 96vw;
+    height: 0.5vh;
+    background-color: #fff65f;
+    position: absolute;
+    left: 0;
+    bottom: -0.5vh; /* ρυθμίζει τη θέση της γραμμής λίγο χαμηλότερα */
+}
+
+
+
+/* Rows of triangles */
+.row {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1vw;
+    z-index: 1;
+}
+
+.row.top { top: 0; height: 50%; }
+.row.bottom { bottom: 0; height: 50%; }
+
+/* Triangles */
+.tri { width: 5vw; height: 100%; }
+
+.row.top .tri {
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.row.bottom .tri {
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.c1 { background: #000000; }
+.c2 { background: #D9D9D9; }
+
+/* Content στο κέντρο, λίγο πιο κάτω */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 35vh; /* πιο κάτω όπως ζητήθηκε */
+}
+
+/* Subtitle */
+.subtitle {
+    color: #d8ff72;
+    margin-bottom: 3vh;
+    font-size: 2.5vw;
+}
+
+/* Κουμπιά responsive */
+.button-row {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #f7f36d;
+    border-radius: 30px;
+    padding: 1.5vh 3vw;  
+    border: none;
+    margin: 0.5vh;
+    cursor: pointer;
+    font-size: 2vw;    
+}
+
+button:hover {
+    background: #fff27c;
+}
